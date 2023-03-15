@@ -3,3 +3,16 @@
   margin: 0;
   padding: 0;
 }
+
+.__navbar {
+  height: 70px;
+}
+
+.__footer {
+  height: 60px;
+}
+
+.__my-container-outer {
+  height: calc(100vh - (70px + 60px));
+  background-color: grey;
+}
