@@ -14,5 +14,14 @@
 
 .__my-container-outer {
   height: calc(100vh - (70px + 60px));
-  background-color: grey;
+  background-color: #cdcdcd;
+}
+
+.__done {
+  text-decoration: line-through;
+}
+
+#btn-delete {
+  color: red;
+  cursor: pointer;
 }

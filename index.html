@@ -36,7 +36,26 @@
     </header>
     <main>
       <div class="container-fluid __my-container-outer">
-        {{message}}
+        <h1 class="text-white">To do List</h1>
+        <ul>
+          <!-- Stampare all'interno di una lista HTML un item per ogni todo. -->
+          <!-- :style="{color: todoColor}" -->
+          <li v-for="(todo, index) in todos" class="fw-medium fs-2">
+            <!-- Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
+
+            <span v-if="!todo.done">{{todo.text}}</span>
+            <span v-else class="__done">{{todo.text}}</span>
+            -
+            <!-- Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista. -->
+
+            <span @click="deleteTodo(index) " id="btn-delete"><i class="fa-regular fa-circle-xmark"></i></span>
+
+          </li>
+        </ul>
+        <input id="input" type="text" v-model="newText" @keyup.enter="addTodo()">
+        <button @click="addTodo()">Aggiungi</button>
+
+
 
       </div>
 
