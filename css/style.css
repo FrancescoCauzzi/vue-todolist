@@ -15,6 +15,7 @@
 .__my-container-outer {
   height: calc(100vh - (70px + 60px));
   background-color: #cdcdcd;
+  overflow: auto;
 }
 
 .__done {

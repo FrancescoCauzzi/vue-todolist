@@ -35,8 +35,8 @@
 
     </header>
     <main>
-      <div class="container-fluid __my-container-outer">
-        <h1 class="text-white">To do List</h1>
+      <div class="container-fluid __my-container-outer p-3">
+        <h1 class="fw-bolder" style="color: #6F0F23">To do List</h1>
         <ul>
           <!-- Stampare all'interno di una lista HTML un item per ogni todo. -->
           <!-- :style="{color: todoColor}" -->
@@ -52,8 +52,12 @@
 
           </li>
         </ul>
-        <input id="input" type="text" v-model="newInput" @keyup.enter="addTodo()">
-        <button @click="addTodo()">Aggiungi</button>
+        <div class="d-flex gap-1 __input-container">
+
+          <input id="input" type="text" class="form-control w-25" placeholder="Scrivi cosa vuoi fare" v-model="newInput"
+            @keyup.enter="addTodo()">
+          <button type="button" class="btn btn-primary" @click="addTodo()">Aggiungi</button>
+        </div>
 
 
 
