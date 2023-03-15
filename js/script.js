@@ -6,7 +6,7 @@ createApp({
     return {
       message: "Hello Vue!",
       todos: [
-        { text: "Fare la spesa", done: true },
+        { text: "Fare la spesa", done: false },
         { text: "Andare in posta", done: false },
         { text: "Pulire la casa", done: false },
         { text: "Fare la lavanderia", done: false },
@@ -35,6 +35,13 @@ createApp({
       this.newTodo = {};
 
       this.newInput = "";
+    },
+    handleClickOnText(myIndex) {
+      if (this.todos[myIndex].done === false) {
+        this.todos[myIndex].done = true;
+      } else {
+        this.todos[myIndex].done = false;
+      }
     },
   },
 }).mount("#app");

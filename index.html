@@ -43,8 +43,8 @@
           <li v-for="(todo, index) in todos" class="fw-medium fs-2">
             <!-- Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
 
-            <span v-if="!todo.done">{{todo.text}}</span>
-            <span v-else class="__done">{{todo.text}}</span>
+            <span :class="!todo.done ? '' : '__done'" @click="handleClickOnText(index)">{{todo.text}}</span>
+
             -
             <!-- Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista. -->
 
