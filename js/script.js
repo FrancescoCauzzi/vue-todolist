@@ -14,8 +14,8 @@ createApp({
         { text: "Prenotare una cena con gli amici", done: false },
         { text: "Scrivere una lettera di ringraziamento", done: false },
       ],
-      newTodo: { text: "", done: false },
-      newText: null,
+      newTodo: {},
+      newInput: "",
     };
   },
   methods: {
@@ -26,16 +26,15 @@ createApp({
     },
 
     addTodo() {
-      console.log(this.newText);
-      this.newTodo.text = this.newText;
-      this.todos.push(this.newTodo);
-      console.log(this.newTodo);
-      newTodo = { text: "", done: false };
-      console.log(this.newTodo);
-
       console.log(this.newTodo.text);
-      console.log(this.todos);
-      this.newText = "";
+      this.newTodo.text = this.newInput;
+      this.newTodo.done = false;
+
+      this.todos.push(this.newTodo);
+
+      this.newTodo = {};
+
+      this.newInput = "";
     },
   },
 }).mount("#app");
