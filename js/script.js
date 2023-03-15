@@ -26,7 +26,6 @@ createApp({
     },
 
     addTodo() {
-      console.log(this.newTodo.text);
       this.newTodo.text = this.newInput;
       this.newTodo.done = false;
 
