@@ -36,9 +36,11 @@ createApp({
       this.newInput = "";
     },
     handleClickOnText(myIndex) {
-      !this.todos[myIndex].done
-        ? (this.todos[myIndex].done = true)
-        : (this.todos[myIndex].done = false);
+      this.todos[myIndex].done = !this.todos[myIndex].done;
+
+      // !this.todos[myIndex].done
+      //   ? (this.todos[myIndex].done = true)
+      //   : (this.todos[myIndex].done = false);
 
       // if (this.todos[myIndex].done === false) {
       //   this.todos[myIndex].done = true;

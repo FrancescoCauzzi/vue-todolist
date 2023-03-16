@@ -20,6 +20,7 @@
 
 .__done {
   text-decoration: line-through;
+  color: #b21e77;
 }
 
 #btn-delete {
